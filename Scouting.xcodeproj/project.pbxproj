@@ -17,6 +17,7 @@
 		E30942762220EC6200F2F2D6 /* PreMatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E30942752220EC6200F2F2D6 /* PreMatchViewController.m */; };
 		E30942792220EFF600F2F2D6 /* CycleTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E30942782220EFF600F2F2D6 /* CycleTimeViewController.m */; };
 		E309427F22210EC900F2F2D6 /* QRCodeMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E309427E22210EC900F2F2D6 /* QRCodeMaker.m */; };
+		E3094282222113B700F2F2D6 /* QRCodeDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3094281222113B700F2F2D6 /* QRCodeDisplayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		E30942782220EFF600F2F2D6 /* CycleTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CycleTimeViewController.m; sourceTree = "<group>"; };
 		E309427D22210EC900F2F2D6 /* QRCodeMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeMaker.h; sourceTree = "<group>"; };
 		E309427E22210EC900F2F2D6 /* QRCodeMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeMaker.m; sourceTree = "<group>"; };
+		E3094280222113B700F2F2D6 /* QRCodeDisplayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeDisplayViewController.h; sourceTree = "<group>"; };
+		E3094281222113B700F2F2D6 /* QRCodeDisplayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeDisplayViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				E30942752220EC6200F2F2D6 /* PreMatchViewController.m */,
 				E30942772220EFF600F2F2D6 /* CycleTimeViewController.h */,
 				E30942782220EFF600F2F2D6 /* CycleTimeViewController.m */,
+				E3094280222113B700F2F2D6 /* QRCodeDisplayViewController.h */,
+				E3094281222113B700F2F2D6 /* QRCodeDisplayViewController.m */,
 				E309427D22210EC900F2F2D6 /* QRCodeMaker.h */,
 				E309427E22210EC900F2F2D6 /* QRCodeMaker.m */,
 				E309424B2220EB7F00F2F2D6 /* Assets.xcassets */,
@@ -277,6 +282,7 @@
 				E309427F22210EC900F2F2D6 /* QRCodeMaker.m in Sources */,
 				E30942792220EFF600F2F2D6 /* CycleTimeViewController.m in Sources */,
 				E30942442220EB7C00F2F2D6 /* AppDelegate.m in Sources */,
+				E3094282222113B700F2F2D6 /* QRCodeDisplayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

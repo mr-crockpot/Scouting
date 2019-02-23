@@ -6,13 +6,13 @@
 //  Copyright © 2019 AandA Development. All rights reserved.
 //
 
-#import <CoreImage/CoreImage.h>
+#import <CoreImage/CoreImage.h> 
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface QRCodeMaker : CIImage
 
-- (CIImage *)createQRForString:(NSString *)qrString;
++ (CIImage *)createQRForString:(NSString *)qrString;
 
 @end
 

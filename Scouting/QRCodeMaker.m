@@ -10,7 +10,7 @@
 
 @implementation QRCodeMaker
 
-- (CIImage *)createQRForString:(NSString *)qrString
++ (CIImage *)createQRForString:(NSString *)qrString
 {
     // Need to convert the string to a UTF-8 encoded NSData object
     NSData *stringData = [qrString dataUsingEncoding:NSUTF8StringEncoding];
@@ -24,7 +24,5 @@
     // Send the image back
     return qrFilter.outputImage;
 }
-
-
 
 @end

@@ -114,6 +114,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vao-XH-IKQ">
+                                <rect key="frame" x="176" y="581" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="GO"/>
+                                <connections>
+                                    <segue destination="JX4-bK-uEM" kind="show" id="Koe-Xr-LxY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="VVo-pZ-yzU"/>
@@ -124,11 +132,36 @@
                         <outlet property="lblMatchNumber" destination="qEE-YI-LbC" id="H13-rq-Au3"/>
                         <outlet property="lblTeamNumber" destination="gXj-RM-lV7" id="FzP-Bq-xyK"/>
                         <outlet property="lblTimer" destination="fqB-Nl-Zrl" id="mv9-Hk-p9f"/>
+                        <segue destination="JX4-bK-uEM" kind="show" identifier="segueCycleTimeToQRCodeDisplay" id="EKW-j6-6sc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZG-z9-35X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2317.5999999999999" y="30.134932533733135"/>
+        </scene>
+        <!--Code Display View Controller-->
+        <scene sceneID="TnS-El-3kw">
+            <objects>
+                <viewController id="JX4-bK-uEM" customClass="QRCodeDisplayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FS8-UA-imC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nos-lZ-mfR">
+                                <rect key="frame" x="72" y="208" width="259" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sPE-Wq-fhh"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageViewQRCode" destination="Nos-lZ-mfR" id="Ysf-vF-dRD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQU-IB-MPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3085.5999999999999" y="29.23538230884558"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="efk-og-pKF">
@@ -149,4 +182,7 @@
             <point key="canvasLocation" x="560.79999999999995" y="114.69265367316342"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EKW-j6-6sc"/>
+    </inferredMetricsTieBreakers>
 </document>
