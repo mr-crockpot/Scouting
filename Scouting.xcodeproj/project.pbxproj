@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		E30942442220EB7C00F2F2D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E30942432220EB7C00F2F2D6 /* AppDelegate.m */; };
-		E30942472220EB7D00F2F2D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E30942462220EB7D00F2F2D6 /* ViewController.m */; };
 		E309424A2220EB7D00F2F2D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E30942482220EB7D00F2F2D6 /* Main.storyboard */; };
 		E309424C2220EB7F00F2F2D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E309424B2220EB7F00F2F2D6 /* Assets.xcassets */; };
 		E309424F2220EB7F00F2F2D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E309424D2220EB7F00F2F2D6 /* LaunchScreen.storyboard */; };
 		E30942522220EB7F00F2F2D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E30942512220EB7F00F2F2D6 /* main.m */; };
 		E309425C2220EB7F00F2F2D6 /* ScoutingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E309425B2220EB7F00F2F2D6 /* ScoutingTests.m */; };
 		E30942672220EB7F00F2F2D6 /* ScoutingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E30942662220EB7F00F2F2D6 /* ScoutingUITests.m */; };
+		E30942762220EC6200F2F2D6 /* PreMatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E30942752220EC6200F2F2D6 /* PreMatchViewController.m */; };
+		E30942792220EFF600F2F2D6 /* CycleTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E30942782220EFF600F2F2D6 /* CycleTimeViewController.m */; };
+		E309427F22210EC900F2F2D6 /* QRCodeMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E309427E22210EC900F2F2D6 /* QRCodeMaker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +40,6 @@
 		E309423F2220EB7C00F2F2D6 /* Scouting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scouting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E30942422220EB7C00F2F2D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E30942432220EB7C00F2F2D6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E30942452220EB7D00F2F2D6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E30942462220EB7D00F2F2D6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E30942492220EB7D00F2F2D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E309424B2220EB7F00F2F2D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E309424E2220EB7F00F2F2D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,12 @@
 		E30942622220EB7F00F2F2D6 /* ScoutingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoutingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E30942662220EB7F00F2F2D6 /* ScoutingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoutingUITests.m; sourceTree = "<group>"; };
 		E30942682220EB7F00F2F2D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E30942742220EC6200F2F2D6 /* PreMatchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreMatchViewController.h; sourceTree = "<group>"; };
+		E30942752220EC6200F2F2D6 /* PreMatchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreMatchViewController.m; sourceTree = "<group>"; };
+		E30942772220EFF600F2F2D6 /* CycleTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CycleTimeViewController.h; sourceTree = "<group>"; };
+		E30942782220EFF600F2F2D6 /* CycleTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CycleTimeViewController.m; sourceTree = "<group>"; };
+		E309427D22210EC900F2F2D6 /* QRCodeMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeMaker.h; sourceTree = "<group>"; };
+		E309427E22210EC900F2F2D6 /* QRCodeMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeMaker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +109,13 @@
 			children = (
 				E30942422220EB7C00F2F2D6 /* AppDelegate.h */,
 				E30942432220EB7C00F2F2D6 /* AppDelegate.m */,
-				E30942452220EB7D00F2F2D6 /* ViewController.h */,
-				E30942462220EB7D00F2F2D6 /* ViewController.m */,
 				E30942482220EB7D00F2F2D6 /* Main.storyboard */,
+				E30942742220EC6200F2F2D6 /* PreMatchViewController.h */,
+				E30942752220EC6200F2F2D6 /* PreMatchViewController.m */,
+				E30942772220EFF600F2F2D6 /* CycleTimeViewController.h */,
+				E30942782220EFF600F2F2D6 /* CycleTimeViewController.m */,
+				E309427D22210EC900F2F2D6 /* QRCodeMaker.h */,
+				E309427E22210EC900F2F2D6 /* QRCodeMaker.m */,
 				E309424B2220EB7F00F2F2D6 /* Assets.xcassets */,
 				E309424D2220EB7F00F2F2D6 /* LaunchScreen.storyboard */,
 				E30942502220EB7F00F2F2D6 /* Info.plist */,
@@ -262,8 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E30942472220EB7D00F2F2D6 /* ViewController.m in Sources */,
 				E30942522220EB7F00F2F2D6 /* main.m in Sources */,
+				E30942762220EC6200F2F2D6 /* PreMatchViewController.m in Sources */,
+				E309427F22210EC900F2F2D6 /* QRCodeMaker.m in Sources */,
+				E30942792220EFF600F2F2D6 /* CycleTimeViewController.m in Sources */,
 				E30942442220EB7C00F2F2D6 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
