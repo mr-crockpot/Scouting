@@ -85,7 +85,7 @@
 
 -(void)storeHatchResults {
     
-    NSString *querySaveHatchData = [NSString stringWithFormat:@"INSERT INTO hatch VALUES (null,%li,%li,%li,%f,'%@')",_teamNumber,_matchNumber,_observationHatch,_timeElapsed,_stringTimeStamp];
+    NSString *querySaveHatchData = [NSString stringWithFormat:@"INSERT INTO hatch VALUES (null,%li,%li,%li,%f,'%@',TRUE)",_teamNumber,_matchNumber,_observationHatch,_timeElapsed,_stringTimeStamp];
     [_dbManager executeQuery:querySaveHatchData];
     
     NSString *testSave =[NSString stringWithFormat:@"SELECT * FROM hatch"];

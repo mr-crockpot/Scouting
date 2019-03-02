@@ -15,44 +15,86 @@
 @implementation HatchDataTableViewController
 
 - (void)viewDidLoad {
+    
+    _dbManager = [[DBManager alloc] initWithDatabaseFilename:@"scoutingDB.db"];
+    
     [super viewDidLoad];
+    
+    
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [self loadData];
+    [self.tableView reloadData];
+    
+}
+
+-(void)loadData {
+    
+    NSString *queryLoadHatchData = @"SELECT * FROM hatch";
+    _arrHatchData = [[NSMutableArray alloc] initWithArray:[_dbManager loadDataFromDB:queryLoadHatchData]];
+    NSLog(@"The array is %@",_arrHatchData);
+
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return _arrHatchData.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    // Configure the cell...
+  /*  if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+       // cell.selectionStyle = UITableViewCellSelectionStyleNone;}
+    */
+    
+  
+    NSString *cellTeam;
+    NSString *cellTime;
+    cellTeam = [NSString stringWithFormat:@"Team %@ in Match %@",_arrHatchData[indexPath.row][1],_arrHatchData[indexPath.row][2] ];
+    
+    
+    cellTime = [NSString stringWithFormat:@"%0.2f",[_arrHatchData[indexPath.row][4] doubleValue]];
+    
+    
+    
+    cell.textLabel.text = cellTeam;
+    cell.detailTextLabel.text = cellTime;
+    cell.detailTextLabel.textColor = [UIColor redColor];
+    cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:20];
+    
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    if ([_arrHatchData[indexPath.row][6] boolValue] == TRUE ) {
+        cell.accessoryType= UITableViewCellAccessoryNone;
+    }
+    
     
     return cell;
 }
-*/
 
-/*
+
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
+
 
 /*
 // Override to support editing the table view.

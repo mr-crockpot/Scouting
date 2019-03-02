@@ -7,10 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DBManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HatchDataTableViewController : UITableViewController
+
+@property (strong, nonatomic) DBManager *dbManager;
+
+
+
+
+@property (strong,nonatomic) NSMutableArray *arrHatchData;
+
 
 @end
 

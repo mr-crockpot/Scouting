@@ -19,9 +19,9 @@
 		E309427F22210EC900F2F2D6 /* QRCodeMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E309427E22210EC900F2F2D6 /* QRCodeMaker.m */; };
 		E3094282222113B700F2F2D6 /* QRCodeDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3094281222113B700F2F2D6 /* QRCodeDisplayViewController.m */; };
 		E309428522225EC700F2F2D6 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E309428422225EC700F2F2D6 /* DBManager.m */; };
-		E3F9E7E1222A527D00E8B453 /* scoutingDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E3F9E7E0222A527D00E8B453 /* scoutingDB.db */; };
-		E3F9E7E2222A527D00E8B453 /* scoutingDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E3F9E7E0222A527D00E8B453 /* scoutingDB.db */; };
-		E3F9E7E3222A527D00E8B453 /* scoutingDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E3F9E7E0222A527D00E8B453 /* scoutingDB.db */; };
+		E360B49A222B34AB00F95E1F /* scoutingDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E360B499222B34AA00F95E1F /* scoutingDB.db */; };
+		E360B49B222B34AB00F95E1F /* scoutingDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E360B499222B34AA00F95E1F /* scoutingDB.db */; };
+		E360B49C222B34AB00F95E1F /* scoutingDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E360B499222B34AA00F95E1F /* scoutingDB.db */; };
 		E3F9E7E6222A594D00E8B453 /* HatchDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F9E7E5222A594D00E8B453 /* HatchDataTableViewController.m */; };
 		E3F9E7E7222A594D00E8B453 /* HatchDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F9E7E5222A594D00E8B453 /* HatchDataTableViewController.m */; };
 		E3F9E7E8222A594D00E8B453 /* HatchDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F9E7E5222A594D00E8B453 /* HatchDataTableViewController.m */; };
@@ -72,7 +72,7 @@
 		E3094281222113B700F2F2D6 /* QRCodeDisplayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeDisplayViewController.m; sourceTree = "<group>"; };
 		E309428322225EC700F2F2D6 /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		E309428422225EC700F2F2D6 /* DBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
-		E3F9E7E0222A527D00E8B453 /* scoutingDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = scoutingDB.db; sourceTree = "<group>"; };
+		E360B499222B34AA00F95E1F /* scoutingDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = scoutingDB.db; sourceTree = "<group>"; };
 		E3F9E7E4222A594D00E8B453 /* HatchDataTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HatchDataTableViewController.h; sourceTree = "<group>"; };
 		E3F9E7E5222A594D00E8B453 /* HatchDataTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HatchDataTableViewController.m; sourceTree = "<group>"; };
 		E3F9E7E9222A597700E8B453 /* CargoDataTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CargoDataTableViewController.h; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 				E309425A2220EB7F00F2F2D6 /* ScoutingTests */,
 				E30942652220EB7F00F2F2D6 /* ScoutingUITests */,
 				E30942402220EB7C00F2F2D6 /* Products */,
-				E3F9E7E0222A527D00E8B453 /* scoutingDB.db */,
+				E360B499222B34AA00F95E1F /* scoutingDB.db */,
 			);
 			sourceTree = "<group>";
 		};
@@ -277,7 +277,7 @@
 				E309424F2220EB7F00F2F2D6 /* LaunchScreen.storyboard in Resources */,
 				E309424C2220EB7F00F2F2D6 /* Assets.xcassets in Resources */,
 				E309424A2220EB7D00F2F2D6 /* Main.storyboard in Resources */,
-				E3F9E7E1222A527D00E8B453 /* scoutingDB.db in Resources */,
+				E360B49A222B34AB00F95E1F /* scoutingDB.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3F9E7E2222A527D00E8B453 /* scoutingDB.db in Resources */,
+				E360B49B222B34AB00F95E1F /* scoutingDB.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3F9E7E3222A527D00E8B453 /* scoutingDB.db in Resources */,
+				E360B49C222B34AB00F95E1F /* scoutingDB.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

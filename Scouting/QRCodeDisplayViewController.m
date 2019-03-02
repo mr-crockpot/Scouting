@@ -16,15 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _dbManager = [[DBManager alloc] initWithDatabaseFilename:@"scoutingDB.db"];
     // Do any additional setup after loading the view.
+   
     [self displayQRCode];
 }
 
 -(void)displayQRCode {
-    NSString *data = @"1234578910";
-    _QRCodeUI = [[UIImage alloc] initWithCIImage:[QRCodeMaker createQRForString:data]];
+    
+    NSString *queryDataToSubmit = @"SELECT * FROM hatch WHERE hatch.entered = TRUE";
+    _arrSubmittedData = [[NSMutableArray alloc] initWithArray:[_dbManager loadDataFromDB:queryDataToSubmit]];
+    _QRCodeUI = [[UIImage alloc] initWithCIImage:[QRCodeMaker createQRForString:[NSString stringWithFormat:@"%@",_arrSubmittedData]]];
     
     _imageViewQRCode.image = _QRCodeUI;
+   
+    NSString *queryAcceptData =@ "update hatch set entered = 0";
+    [_dbManager executeQuery:queryAcceptData];
     
 }
 

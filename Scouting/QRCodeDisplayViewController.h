@@ -9,11 +9,20 @@
 #import <UIKit/UIKit.h>
 #import <CoreImage/CoreImage.h>
 #import "QRCodeMaker.h"
+#import "DBManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface QRCodeDisplayViewController : UIViewController
+
+@property (strong,nonatomic) DBManager *dbManager;
+@property (strong,nonatomic) NSMutableArray *arrSubmittedData;
+@property NSString *incomingMode;
+@property NSString *data;
+
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewQRCode;
+
+
 
 
 @property CIImage *QRCodeCI;
