@@ -47,6 +47,7 @@
                     <navigationItem key="navigationItem" id="siK-mb-TKr"/>
                     <connections>
                         <outlet property="btnStart" destination="7Nf-ZQ-v9l" id="T2x-Sb-qoA"/>
+                        <outlet property="textFieldMatchNumber" destination="Qs9-Mu-vbc" id="woh-IP-ubc"/>
                         <outlet property="textFieldTeamNumber" destination="Wju-i8-EP6" id="eFZ-4E-lhd"/>
                         <segue destination="rde-ag-i3I" kind="show" identifier="seguePreMatchToCycleTime" id="XtU-bt-hrD"/>
                     </connections>
@@ -101,14 +102,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEE-YI-LbC">
-                                <rect key="frame" x="305" y="590" width="42" height="21"/>
+                                <rect key="frame" x="223" y="590" width="124" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXj-RM-lV7">
-                                <rect key="frame" x="16" y="589" width="42" height="21"/>
+                                <rect key="frame" x="16" y="589" width="152" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>

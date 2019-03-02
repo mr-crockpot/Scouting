@@ -7,6 +7,7 @@
 //
 
 #import "PreMatchViewController.h"
+#import "CycleTimeViewController.h"
 
 @interface PreMatchViewController ()
 
@@ -23,4 +24,12 @@
 - (IBAction)btnStartPressed:(id)sender {
     [self performSegueWithIdentifier:@"seguePreMatchToCycleTime" sender:self];
     }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    CycleTimeViewController *cycleTimeVC = [segue destinationViewController];
+    cycleTimeVC.matchNumber = [_textFieldMatchNumber.text integerValue];
+    cycleTimeVC.teamNumber = [_textFieldTeamNumber.text integerValue];
+    
+}
 @end

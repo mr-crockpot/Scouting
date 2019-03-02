@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UITextField *textFieldTeamNumber;
 @property (strong, nonatomic) IBOutlet UIButton *btnStart;
 - (IBAction)btnStartPressed:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextField *textFieldMatchNumber;
 
 @end
 

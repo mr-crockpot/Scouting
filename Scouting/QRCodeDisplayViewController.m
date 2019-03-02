@@ -26,7 +26,7 @@
     
     _imageViewQRCode.image = _QRCodeUI;
     
-                      
 }
+
 
 @end

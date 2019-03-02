@@ -18,6 +18,10 @@
 		E30942792220EFF600F2F2D6 /* CycleTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E30942782220EFF600F2F2D6 /* CycleTimeViewController.m */; };
 		E309427F22210EC900F2F2D6 /* QRCodeMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E309427E22210EC900F2F2D6 /* QRCodeMaker.m */; };
 		E3094282222113B700F2F2D6 /* QRCodeDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3094281222113B700F2F2D6 /* QRCodeDisplayViewController.m */; };
+		E309428522225EC700F2F2D6 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E309428422225EC700F2F2D6 /* DBManager.m */; };
+		E3F9E7D1222A41AB00E8B453 /* scoutDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E3F9E7D0222A41AB00E8B453 /* scoutDB.db */; };
+		E3F9E7D2222A41AB00E8B453 /* scoutDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E3F9E7D0222A41AB00E8B453 /* scoutDB.db */; };
+		E3F9E7D3222A41AB00E8B453 /* scoutDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E3F9E7D0222A41AB00E8B453 /* scoutDB.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,9 @@
 		E309427E22210EC900F2F2D6 /* QRCodeMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeMaker.m; sourceTree = "<group>"; };
 		E3094280222113B700F2F2D6 /* QRCodeDisplayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeDisplayViewController.h; sourceTree = "<group>"; };
 		E3094281222113B700F2F2D6 /* QRCodeDisplayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeDisplayViewController.m; sourceTree = "<group>"; };
+		E309428322225EC700F2F2D6 /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		E309428422225EC700F2F2D6 /* DBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		E3F9E7D0222A41AB00E8B453 /* scoutDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = scoutDB.db; path = ../../Scout/scoutDB.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +101,7 @@
 				E309425A2220EB7F00F2F2D6 /* ScoutingTests */,
 				E30942652220EB7F00F2F2D6 /* ScoutingUITests */,
 				E30942402220EB7C00F2F2D6 /* Products */,
+				E3F9E7D0222A41AB00E8B453 /* scoutDB.db */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +127,8 @@
 				E30942782220EFF600F2F2D6 /* CycleTimeViewController.m */,
 				E3094280222113B700F2F2D6 /* QRCodeDisplayViewController.h */,
 				E3094281222113B700F2F2D6 /* QRCodeDisplayViewController.m */,
+				E309428322225EC700F2F2D6 /* DBManager.h */,
+				E309428422225EC700F2F2D6 /* DBManager.m */,
 				E309427D22210EC900F2F2D6 /* QRCodeMaker.h */,
 				E309427E22210EC900F2F2D6 /* QRCodeMaker.m */,
 				E309424B2220EB7F00F2F2D6 /* Assets.xcassets */,
@@ -252,6 +262,7 @@
 			files = (
 				E309424F2220EB7F00F2F2D6 /* LaunchScreen.storyboard in Resources */,
 				E309424C2220EB7F00F2F2D6 /* Assets.xcassets in Resources */,
+				E3F9E7D1222A41AB00E8B453 /* scoutDB.db in Resources */,
 				E309424A2220EB7D00F2F2D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3F9E7D2222A41AB00E8B453 /* scoutDB.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3F9E7D3222A41AB00E8B453 /* scoutDB.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E309428522225EC700F2F2D6 /* DBManager.m in Sources */,
 				E30942522220EB7F00F2F2D6 /* main.m in Sources */,
 				E30942762220EC6200F2F2D6 /* PreMatchViewController.m in Sources */,
 				E309427F22210EC900F2F2D6 /* QRCodeMaker.m in Sources */,
