@@ -116,11 +116,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vao-XH-IKQ">
-                                <rect key="frame" x="176" y="581" width="30" height="30"/>
+                                <rect key="frame" x="134" y="502" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="GO"/>
+                                <state key="normal" title="View Data"/>
                                 <connections>
-                                    <segue destination="JX4-bK-uEM" kind="show" id="Koe-Xr-LxY"/>
+                                    <action selector="btnViewDataPressed:" destination="rde-ag-i3I" eventType="touchUpInside" id="7Q3-1z-OA5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -130,15 +130,66 @@
                     <connections>
                         <outlet property="btnStartCargo" destination="obP-Q4-EES" id="z2q-CP-j0n"/>
                         <outlet property="btnStartHatch" destination="4zu-V6-Y1H" id="4Kr-MR-h46"/>
+                        <outlet property="btnViewData" destination="vao-XH-IKQ" id="laT-AG-3Z0"/>
                         <outlet property="lblMatchNumber" destination="qEE-YI-LbC" id="H13-rq-Au3"/>
                         <outlet property="lblTeamNumber" destination="gXj-RM-lV7" id="FzP-Bq-xyK"/>
                         <outlet property="lblTimer" destination="fqB-Nl-Zrl" id="mv9-Hk-p9f"/>
-                        <segue destination="JX4-bK-uEM" kind="show" identifier="segueCycleTimeToQRCodeDisplay" id="EKW-j6-6sc"/>
+                        <segue destination="96O-J3-NFL" kind="show" identifier="segueCycleTimeToTable" id="p4N-To-3OL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZG-z9-35X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2317.5999999999999" y="30.134932533733135"/>
+        </scene>
+        <!--Cargo Data-->
+        <scene sceneID="PTr-hB-D0O">
+            <objects>
+                <viewController id="r8B-QV-Xg1" customClass="HatchDataTableViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="05O-rZ-M6a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="UjN-aE-f9l"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cargo Data" id="J8B-Ls-NiA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JWu-EB-NVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4201" y="234"/>
+        </scene>
+        <!--Hatch Data-->
+        <scene sceneID="hMX-0D-RN4">
+            <objects>
+                <viewController id="UEM-GS-XvK" customClass="CargoDataTableViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k5u-z8-EBK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cjZ-bV-qte"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hatch Data" id="YG2-dh-MrO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BhA-nL-WH7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4201" y="-525"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="baw-Zm-VtN">
+            <objects>
+                <tabBarController id="96O-J3-NFL" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sqf-Ts-zlf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UEM-GS-XvK" kind="relationship" relationship="viewControllers" id="mDZ-TP-yLI"/>
+                        <segue destination="r8B-QV-Xg1" kind="relationship" relationship="viewControllers" id="2hO-fr-j9h"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IUk-eG-oVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3236" y="29"/>
         </scene>
         <!--Code Display View Controller-->
         <scene sceneID="TnS-El-3kw">
@@ -162,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQU-IB-MPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3085.5999999999999" y="29.23538230884558"/>
+            <point key="canvasLocation" x="5649" y="30"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="efk-og-pKF">
@@ -183,7 +234,4 @@
             <point key="canvasLocation" x="560.79999999999995" y="114.69265367316342"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="EKW-j6-6sc"/>
-    </inferredMetricsTieBreakers>
 </document>

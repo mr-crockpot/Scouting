@@ -42,6 +42,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property NSDate *timeStamp;
 @property NSString *stringTimeStamp;
+@property (strong, nonatomic) IBOutlet UIButton *btnViewData;
+- (IBAction)btnViewDataPressed:(id)sender;
 @end
 
 NS_ASSUME_NONNULL_END

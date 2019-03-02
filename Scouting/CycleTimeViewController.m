@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _dbManager = [[DBManager alloc] initWithDatabaseFilename:@"scoutDB.db"];
+    _dbManager = [[DBManager alloc] initWithDatabaseFilename:@"scoutingDB.db"];
     _lblTeamNumber.text= [NSString stringWithFormat:@"Team: %li",_teamNumber];
     _lblMatchNumber.text = [NSString stringWithFormat:@"Match: %li",_matchNumber];
     
@@ -59,6 +59,11 @@
     else {
         [_btnStartCargo setTitle:@"Start Cargo" forState:UIControlStateNormal];
         _btnStartHatch.alpha = 1;
+        _timeStamp = [NSDate date];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+        _stringTimeStamp = [formatter stringFromDate:_timeStamp];
+        [self storeCargoResults];
         [self stopTimer];
     }
 }
@@ -79,16 +84,29 @@
 }
 
 -(void)storeHatchResults {
-    NSLog(@"the time stamp is %@",_stringTimeStamp);
+    
     NSString *querySaveHatchData = [NSString stringWithFormat:@"INSERT INTO hatch VALUES (null,%li,%li,%li,%f,'%@')",_teamNumber,_matchNumber,_observationHatch,_timeElapsed,_stringTimeStamp];
     [_dbManager executeQuery:querySaveHatchData];
     
     NSString *testSave =[NSString stringWithFormat:@"SELECT * FROM hatch"];
-    //_arrAllGifts = [[NSMutableArray alloc] initWithArray:[_dbManager loadDataFromDB:queryAllGifts]];
+    
+    NSMutableArray *testResult = [[NSMutableArray alloc] initWithArray:[_dbManager loadDataFromDB:testSave]];
+    NSLog(@"the data is %@",testResult);
+}
+
+-(void)storeCargoResults {
+    
+    NSString *querySaveCargoData = [NSString stringWithFormat:@"INSERT INTO cargo VALUES (null,%li,%li,%li,%f,'%@')",_teamNumber,_matchNumber,_observationHatch,_timeElapsed,_stringTimeStamp];
+    [_dbManager executeQuery:querySaveCargoData];
+    
+    NSString *testSave =[NSString stringWithFormat:@"SELECT * FROM cargo"];
     
     NSMutableArray *testResult = [[NSMutableArray alloc] initWithArray:[_dbManager loadDataFromDB:testSave]];
     NSLog(@"the data is %@",testResult);
 }
 
 
+- (IBAction)btnViewDataPressed:(id)sender {
+    [self performSegueWithIdentifier:@"segueCycleTimeToTable"sender:self];
+}
 @end
