@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong,nonatomic) DBManager *dbManager;
 @property (strong,nonatomic) NSMutableArray *arrSubmittedData;
-@property NSString *incomingMode;
+@property NSInteger incomingValue;
 @property NSString *data;
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewQRCode;

@@ -21,8 +21,7 @@
     _lblTeamNumber.text= [NSString stringWithFormat:@"Team: %li",_teamNumber];
     _lblMatchNumber.text = [NSString stringWithFormat:@"Match: %li",_matchNumber];
     
-    
-    // Do any additional setup after loading the view.
+   
     
 }
 
@@ -96,13 +95,13 @@
 
 -(void)storeCargoResults {
     
-    NSString *querySaveCargoData = [NSString stringWithFormat:@"INSERT INTO cargo VALUES (null,%li,%li,%li,%f,'%@')",_teamNumber,_matchNumber,_observationHatch,_timeElapsed,_stringTimeStamp];
+    NSString *querySaveCargoData = [NSString stringWithFormat:@"INSERT INTO cargo VALUES (null,%li,%li,%li,%f,'%@',TRUE)",_teamNumber,_matchNumber,_observationHatch,_timeElapsed,_stringTimeStamp];
     [_dbManager executeQuery:querySaveCargoData];
     
     NSString *testSave =[NSString stringWithFormat:@"SELECT * FROM cargo"];
     
     NSMutableArray *testResult = [[NSMutableArray alloc] initWithArray:[_dbManager loadDataFromDB:testSave]];
-    NSLog(@"the data is %@",testResult);
+    NSLog(@"the cargo data is %@",testResult);
 }
 
 

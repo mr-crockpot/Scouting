@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     
     _dbManager = [[DBManager alloc] initWithDatabaseFilename:@"scoutingDB.db"];
+    UIBarButtonItem *submit = [[UIBarButtonItem alloc] initWithTitle:@"Submit" style:UIBarButtonItemStylePlain target:self action:@selector(loadData)];
+    self.navigationItem.leftItemsSupplementBackButton = YES;
+    self.navigationItem.leftBarButtonItems= [NSArray arrayWithObjects:submit, nil];
+    
     
     [super viewDidLoad];
     
