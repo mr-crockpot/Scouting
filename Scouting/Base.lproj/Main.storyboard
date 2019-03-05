@@ -243,9 +243,17 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Item" id="gh5-VC-Hco"/>
+                                    <barButtonItem title="Show Unsubmitted" id="gh5-VC-Hco">
+                                        <connections>
+                                            <action selector="btnShowUnsubmittedPressed:" destination="brF-N7-8HG" id="zg0-9V-vJ3"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="xHl-0f-SPN"/>
-                                    <barButtonItem title="Item" id="D1m-6x-38H"/>
+                                    <barButtonItem title="Show All" id="D1m-6x-38H">
+                                        <connections>
+                                            <action selector="btnShowAllPressed:" destination="brF-N7-8HG" id="H8g-3v-2gh"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bmz-5c-pEL">

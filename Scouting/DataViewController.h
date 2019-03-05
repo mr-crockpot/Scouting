@@ -24,7 +24,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong,nonatomic) NSMutableArray *arrHatchData;
 
 @property (strong, nonatomic) NSString *queryData;
+@property (strong, nonatomic) NSString *type;
 
+
+- (IBAction)btnShowUnsubmittedPressed:(id)sender;
+- (IBAction)btnShowAllPressed:(id)sender;
 
 @end
 

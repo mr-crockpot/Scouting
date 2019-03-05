@@ -25,6 +25,7 @@
     
     
     _segmentCargoHatch.selectedSegmentIndex = 0;
+    _type = @"C";
     NSString *queryData = @"select * from times where times.type = 'C'";
     [self loadData:queryData];
     
@@ -81,9 +82,11 @@
     NSString *queryData;
     switch (_segmentCargoHatch.selectedSegmentIndex) {
         case 0:
+            _type = @"C";
             queryData = @"select * from times where times.type = 'C'";
             break;
         case 1:
+            _type = @"H";
             queryData = @"select * from times where times.type = 'H'";
             break;
         case 2:
@@ -99,6 +102,17 @@
 
 -(void)submitData{
     [self performSegueWithIdentifier:@"segueDataToCodeDisplay" sender:self];
+    
+}
+- (IBAction)btnShowUnsubmittedPressed:(id)sender {
+    NSString *queryData = [NSString stringWithFormat: @"select * from times where times.type = '%@' AND  times.entered = 1",_type];
+    [self loadData:queryData];
+    
+}
+
+- (IBAction)btnShowAllPressed:(id)sender {
+    NSString *queryData = [NSString stringWithFormat: @"select * from times where times.type = '%@' AND  times.entered = 0",_type];
+    [self loadData:queryData];
     
 }
 @end

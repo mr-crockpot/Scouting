@@ -28,9 +28,6 @@
 		E3F9E7E6222A594D00E8B453 /* HatchDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F9E7E5222A594D00E8B453 /* HatchDataTableViewController.m */; };
 		E3F9E7E7222A594D00E8B453 /* HatchDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F9E7E5222A594D00E8B453 /* HatchDataTableViewController.m */; };
 		E3F9E7E8222A594D00E8B453 /* HatchDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F9E7E5222A594D00E8B453 /* HatchDataTableViewController.m */; };
-		E3F9E7EB222A597700E8B453 /* CargoDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F9E7EA222A597700E8B453 /* CargoDataTableViewController.m */; };
-		E3F9E7EC222A597700E8B453 /* CargoDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F9E7EA222A597700E8B453 /* CargoDataTableViewController.m */; };
-		E3F9E7ED222A597700E8B453 /* CargoDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F9E7EA222A597700E8B453 /* CargoDataTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,8 +77,6 @@
 		E360B4A7222E3FE900F95E1F /* scoutingDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = scoutingDB.db; sourceTree = "<group>"; };
 		E3F9E7E4222A594D00E8B453 /* HatchDataTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HatchDataTableViewController.h; sourceTree = "<group>"; };
 		E3F9E7E5222A594D00E8B453 /* HatchDataTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HatchDataTableViewController.m; sourceTree = "<group>"; };
-		E3F9E7E9222A597700E8B453 /* CargoDataTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CargoDataTableViewController.h; sourceTree = "<group>"; };
-		E3F9E7EA222A597700E8B453 /* CargoDataTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CargoDataTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +139,6 @@
 				E3F9E7E5222A594D00E8B453 /* HatchDataTableViewController.m */,
 				E360B4A2222C4FE000F95E1F /* DataViewController.h */,
 				E360B4A3222C4FE000F95E1F /* DataViewController.m */,
-				E3F9E7E9222A597700E8B453 /* CargoDataTableViewController.h */,
-				E3F9E7EA222A597700E8B453 /* CargoDataTableViewController.m */,
 				E3094280222113B700F2F2D6 /* QRCodeDisplayViewController.h */,
 				E3094281222113B700F2F2D6 /* QRCodeDisplayViewController.m */,
 				E309428322225EC700F2F2D6 /* DBManager.h */,
@@ -319,7 +312,6 @@
 				E309427F22210EC900F2F2D6 /* QRCodeMaker.m in Sources */,
 				E30942792220EFF600F2F2D6 /* CycleTimeViewController.m in Sources */,
 				E30942442220EB7C00F2F2D6 /* AppDelegate.m in Sources */,
-				E3F9E7EB222A597700E8B453 /* CargoDataTableViewController.m in Sources */,
 				E3094282222113B700F2F2D6 /* QRCodeDisplayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,7 +322,6 @@
 			files = (
 				E360B4A5222C4FE000F95E1F /* DataViewController.m in Sources */,
 				E3F9E7E7222A594D00E8B453 /* HatchDataTableViewController.m in Sources */,
-				E3F9E7EC222A597700E8B453 /* CargoDataTableViewController.m in Sources */,
 				E309425C2220EB7F00F2F2D6 /* ScoutingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,7 +332,6 @@
 			files = (
 				E360B4A6222C4FE000F95E1F /* DataViewController.m in Sources */,
 				E3F9E7E8222A594D00E8B453 /* HatchDataTableViewController.m in Sources */,
-				E3F9E7ED222A597700E8B453 /* CargoDataTableViewController.m in Sources */,
 				E30942672220EB7F00F2F2D6 /* ScoutingUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
