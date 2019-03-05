@@ -25,13 +25,13 @@
 
 -(void)displayQRCode {
     
-    NSString *queryDataToSubmit = @"SELECT * FROM hatch WHERE hatch.entered = TRUE";
+    NSString *queryDataToSubmit = @"SELECT * FROM times WHERE times.entered = TRUE";
     _arrSubmittedData = [[NSMutableArray alloc] initWithArray:[_dbManager loadDataFromDB:queryDataToSubmit]];
     _QRCodeUI = [[UIImage alloc] initWithCIImage:[QRCodeMaker createQRForString:[NSString stringWithFormat:@"%@",_arrSubmittedData]]];
     
     _imageViewQRCode.image = _QRCodeUI;
    
-    NSString *queryAcceptData =@ "update hatch set entered = 0";
+    NSString *queryAcceptData =@ "update times set entered = 0";
     [_dbManager executeQuery:queryAcceptData];
     
 }

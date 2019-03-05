@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSInteger teamNumber;
 @property NSInteger matchNumber;
 @property NSInteger observationNumber;
-
+@property NSString *type;
 
 
 @property BOOL timerOn;

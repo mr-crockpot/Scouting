@@ -27,6 +27,7 @@
 
 
 
+
 - (IBAction)btnStartHatchPressed:(id)sender {
     
     _timerOn = !_timerOn;
@@ -83,22 +84,22 @@
 }
 
 -(void)storeHatchResults {
-    
-    NSString *querySaveHatchData = [NSString stringWithFormat:@"INSERT INTO hatch VALUES (null,%li,%li,%li,%f,'%@',TRUE)",_teamNumber,_matchNumber,_observationHatch,_timeElapsed,_stringTimeStamp];
+    _type = @"H";
+   NSString *querySaveHatchData = [NSString stringWithFormat:@"INSERT INTO times VALUES (null,%li,%li,%li,'%@',%f,'%@',TRUE)",_teamNumber,_matchNumber,_observationHatch,_type,_timeElapsed,_stringTimeStamp];
     [_dbManager executeQuery:querySaveHatchData];
     
-    NSString *testSave =[NSString stringWithFormat:@"SELECT * FROM hatch"];
+    NSString *testSave =[NSString stringWithFormat:@"SELECT * FROM times"];
     
     NSMutableArray *testResult = [[NSMutableArray alloc] initWithArray:[_dbManager loadDataFromDB:testSave]];
     NSLog(@"the data is %@",testResult);
 }
 
 -(void)storeCargoResults {
-    
-    NSString *querySaveCargoData = [NSString stringWithFormat:@"INSERT INTO cargo VALUES (null,%li,%li,%li,%f,'%@',TRUE)",_teamNumber,_matchNumber,_observationHatch,_timeElapsed,_stringTimeStamp];
+    _type = @"C";
+    NSString *querySaveCargoData = [NSString stringWithFormat:@"INSERT INTO times VALUES (null,%li,%li,%li,'%@',%f,'%@',TRUE)",_teamNumber,_matchNumber,_observationHatch,_type,_timeElapsed,_stringTimeStamp];
     [_dbManager executeQuery:querySaveCargoData];
     
-    NSString *testSave =[NSString stringWithFormat:@"SELECT * FROM cargo"];
+    NSString *testSave =[NSString stringWithFormat:@"SELECT * FROM times"];
     
     NSMutableArray *testResult = [[NSMutableArray alloc] initWithArray:[_dbManager loadDataFromDB:testSave]];
     NSLog(@"the cargo data is %@",testResult);

@@ -25,7 +25,7 @@
     
     
     _segmentCargoHatch.selectedSegmentIndex = 0;
-    NSString *queryData = @"SELECT * FROM cargo";
+    NSString *queryData = @"select * from times where times.type = 'C'";
     [self loadData:queryData];
     
     [super viewDidLoad];
@@ -57,7 +57,7 @@
     cellTeam = [NSString stringWithFormat:@"Team %@ in Match %@",_arrHatchData[indexPath.row][1],_arrHatchData[indexPath.row][2] ];
     
     
-    cellTime = [NSString stringWithFormat:@"%0.2f",[_arrHatchData[indexPath.row][4] doubleValue]];
+    cellTime = [NSString stringWithFormat:@"%0.2f",[_arrHatchData[indexPath.row][5] doubleValue]];
     
     
     
@@ -67,7 +67,7 @@
     cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:20];
     
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    if ([_arrHatchData[indexPath.row][6] boolValue] == TRUE ) {
+    if ([_arrHatchData[indexPath.row][7] boolValue] == TRUE ) {
         cell.accessoryType= UITableViewCellAccessoryNone;
     }
     
@@ -79,11 +79,18 @@
 
 - (IBAction)segmentCargoHatchSelected:(id)sender {
     NSString *queryData;
-    if (_segmentCargoHatch.selectedSegmentIndex == 0) {
-        queryData = @"SELECT * FROM cargo";
-    }
-    else {
-        queryData = @"SELECT * FROM hatch";
+    switch (_segmentCargoHatch.selectedSegmentIndex) {
+        case 0:
+            queryData = @"select * from times where times.type = 'C'";
+            break;
+        case 1:
+            queryData = @"select * from times where times.type = 'H'";
+            break;
+        case 2:
+            queryData = @"select * from times";
+            break;
+        default:
+            break;
     }
     
     [self loadData:queryData];
