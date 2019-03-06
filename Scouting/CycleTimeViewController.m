@@ -18,13 +18,56 @@
     [super viewDidLoad];
     
     _dbManager = [[DBManager alloc] initWithDatabaseFilename:@"scoutingDB.db"];
-    _lblTeamNumber.text= [NSString stringWithFormat:@"Team: %li",_teamNumber];
-    _lblMatchNumber.text = [NSString stringWithFormat:@"Match: %li",_matchNumber];
+    
+    UIBarButtonItem *viewData = [[UIBarButtonItem alloc] initWithTitle:@"View Data" style:UIBarButtonItemStylePlain target:self action:@selector(btnViewDataPressed)];
+    self.navigationItem.leftItemsSupplementBackButton = YES;
+    self.navigationItem.rightBarButtonItems= [NSArray arrayWithObjects:viewData, nil];
+    
+    
+    
+    _lblTeamNumber.text= [NSString stringWithFormat:@"%li",_teamNumber];
+    _lblMatchNumber.text = [NSString stringWithFormat:@"%li",_matchNumber];
+     [_btnStartCargo setImage:[UIImage imageNamed:@"play2.png"] forState:UIControlStateNormal];
+     [_btnStartHatch setImage:[UIImage imageNamed:@"play2.png"] forState:UIControlStateNormal];
     
    
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    [self formatLabels];
     
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    
+    if ([self testForNumbers]) {
+        _btnStartCargo.enabled = YES;
+        _btnStartHatch.enabled = YES;
+    }
+    else {
+        _btnStartCargo.enabled = NO;
+        _btnStartHatch.enabled = NO;
+    }
+    
+}
+
+-(void)formatLabels{
+    
+    for (UILabel *label in _outletCollectionLabels) {
+        label.font = [UIFont fontWithName:@"Helvetica" size:16];
+        label.textColor = [UIColor blueColor];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.layer.borderColor = [[UIColor blueColor] CGColor];
+        label.layer.borderWidth = 2;
+        
+    }
+    _lblCargo.layer.borderWidth = 0;
+    _lblHatch.layer.borderWidth = 0;
+    _lblTeamNumber.font = [UIFont fontWithName:@"Helvetica" size:42];
+    _lblMatchNumber.font = [UIFont fontWithName:@"Helvetica" size:42];
+    
+    _lblTimer.font =[UIFont fontWithName:@"Helvetica" size:60];
+    _lblTimer.textColor = [UIColor redColor];
+    
+}
 
 
 
@@ -34,11 +77,13 @@
     if (_timerOn) {
         _observationHatch = _observationHatch + 1;
         [self runTimer];
-        [_btnStartHatch setTitle:@"Stop Hatch" forState:UIControlStateNormal];
+      //  [_btnStartHatch setTitle:@"Stop Hatch" forState:UIControlStateNormal];
+        [_btnStartHatch setImage:[UIImage imageNamed:@"stop1.png"] forState:UIControlStateNormal];
         _btnStartCargo.alpha = 0;
     }
     else {
-        [_btnStartHatch setTitle:@"Start Hatch" forState:UIControlStateNormal];
+       // [_btnStartHatch setTitle:@"Start Hatch" forState:UIControlStateNormal];
+        [_btnStartHatch setImage:[UIImage imageNamed:@"play2.png"] forState:UIControlStateNormal];
         _btnStartCargo.alpha = 1;
         _timeStamp = [NSDate date];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -53,11 +98,13 @@
     _timerOn = !_timerOn;
     if (_timerOn) {
         [self runTimer];
-        [_btnStartCargo setTitle:@"Stop Cargo" forState:UIControlStateNormal];
+     //   [_btnStartCargo setTitle:@"Stop Cargo" forState:UIControlStateNormal];
+         [_btnStartCargo setImage:[UIImage imageNamed:@"stop1.png"] forState:UIControlStateNormal];
         _btnStartHatch.alpha = 0;
     }
     else {
-        [_btnStartCargo setTitle:@"Start Cargo" forState:UIControlStateNormal];
+    //    [_btnStartCargo setTitle:@"Start Cargo" forState:UIControlStateNormal];
+        [_btnStartCargo setImage:[UIImage imageNamed:@"play2.png"] forState:UIControlStateNormal];
         _btnStartHatch.alpha = 1;
         _timeStamp = [NSDate date];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -85,7 +132,7 @@
 
 -(void)storeHatchResults {
     _type = @"H";
-   NSString *querySaveHatchData = [NSString stringWithFormat:@"INSERT INTO times VALUES (null,%li,%li,%li,'%@',%f,'%@',TRUE)",_teamNumber,_matchNumber,_observationHatch,_type,_timeElapsed,_stringTimeStamp];
+   NSString *querySaveHatchData = [NSString stringWithFormat:@"INSERT INTO times VALUES (null,%li,%li,%li,'%@',%0.1f,'%@',TRUE)",_teamNumber,_matchNumber,_observationHatch,_type,_timeElapsed,_stringTimeStamp];
     [_dbManager executeQuery:querySaveHatchData];
     
     NSString *testSave =[NSString stringWithFormat:@"SELECT * FROM times"];
@@ -96,7 +143,7 @@
 
 -(void)storeCargoResults {
     _type = @"C";
-    NSString *querySaveCargoData = [NSString stringWithFormat:@"INSERT INTO times VALUES (null,%li,%li,%li,'%@',%f,'%@',TRUE)",_teamNumber,_matchNumber,_observationHatch,_type,_timeElapsed,_stringTimeStamp];
+    NSString *querySaveCargoData = [NSString stringWithFormat:@"INSERT INTO times VALUES (null,%li,%li,%li,'%@',%0.1f,'%@',TRUE)",_teamNumber,_matchNumber,_observationHatch,_type,_timeElapsed,_stringTimeStamp];
     [_dbManager executeQuery:querySaveCargoData];
     
     NSString *testSave =[NSString stringWithFormat:@"SELECT * FROM times"];
@@ -106,7 +153,28 @@
 }
 
 
-- (IBAction)btnViewDataPressed:(id)sender {
+- (void)btnViewDataPressed {
     [self performSegueWithIdentifier:@"segueCycleTimeToTable"sender:self];
 }
+- (IBAction)btnStopMatchPressed:(id)sender {
+    [_timer invalidate];
+    _lblTeamNumber.text = nil;
+    _lblMatchNumber.text = nil;
+    [self performSegueWithIdentifier:@"segueCycleTimeToPreMatch"sender:self];
+    
+}
+
+-(BOOL)testForNumbers{
+    
+    BOOL numbersThere;
+    
+    if (_lblMatchNumber.text.length == 0 || _lblMatchNumber.text.length == 0) {
+        numbersThere = NO;
+    }
+    else {
+        numbersThere = YES;
+    }
+    return numbersThere;
+}
+
 @end

@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PreMatchViewController : UIViewController
+@interface PreMatchViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *textFieldTeamNumber;
 @property (strong, nonatomic) IBOutlet UIButton *btnStart;
 - (IBAction)btnStartPressed:(id)sender;

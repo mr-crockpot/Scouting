@@ -28,7 +28,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property BOOL timerOn;
 
 
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *outletCollectionLabels;
+@property (strong, nonatomic) IBOutlet UILabel *lblHatch;
+@property (strong, nonatomic) IBOutlet UILabel *lblCargo;
 
+@property (strong, nonatomic) IBOutlet UIView *btnStopMatch;
+- (IBAction)btnStopMatchPressed:(id)sender;
 
 
 @property (strong, nonatomic) IBOutlet UIButton *btnStartHatch;
@@ -42,10 +47,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property NSDate *timeStamp;
 @property NSString *stringTimeStamp;
-@property (strong, nonatomic) IBOutlet UIButton *btnViewData;
-- (IBAction)btnViewDataPressed:(id)sender;
+//@property (strong, nonatomic) IBOutlet UIButton *btnViewData;
+//- (IBAction)btnViewDataPressed:(id)sender;
 
-
+ 
 
 @end
 

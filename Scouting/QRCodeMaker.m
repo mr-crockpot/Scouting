@@ -19,7 +19,7 @@
     CIFilter *qrFilter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
     // Set the message content and error-correction level
     [qrFilter setValue:stringData forKey:@"inputMessage"];
-    [qrFilter setValue:@"H" forKey:@"inputCorrectionLevel"];
+    [qrFilter setValue:@"L" forKey:@"inputCorrectionLevel"];//was H
     
     // Send the image back
     return qrFilter.outputImage;
