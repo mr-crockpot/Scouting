@@ -24,12 +24,19 @@
     self.navigationItem.rightBarButtonItems= [NSArray arrayWithObjects:submit, nil];
     
     
+/*   _segmentCargoHatch.selectedSegmentIndex = 0;
+    _type = @"C";
+    NSString *queryData = @"select * from times where times.type = 'C' and times.entered = 0" ;
+    [self loadData:queryData];
+  */
+    [super viewDidLoad];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
     _segmentCargoHatch.selectedSegmentIndex = 0;
     _type = @"C";
-    NSString *queryData = @"select * from times where times.type = 'C'";
+    NSString *queryData = @"select * from times where times.type = 'C' and times.entered = 1" ;
     [self loadData:queryData];
-    
-    [super viewDidLoad];
 }
 
 -(void)loadData: (NSString*)queryIncoming {

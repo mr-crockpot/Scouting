@@ -21,6 +21,7 @@
     [qrFilter setValue:stringData forKey:@"inputMessage"];
     [qrFilter setValue:@"L" forKey:@"inputCorrectionLevel"];//was H
     
+
     // Send the image back
     return qrFilter.outputImage;
 }

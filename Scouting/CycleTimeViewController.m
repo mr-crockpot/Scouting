@@ -160,7 +160,7 @@
     [_timer invalidate];
     _lblTeamNumber.text = nil;
     _lblMatchNumber.text = nil;
-    [self performSegueWithIdentifier:@"segueCycleTimeToPreMatch"sender:self];
+  //  [self performSegueWithIdentifier:@"segueCycleTimeToPreMatch"sender:self];
     
 }
 
