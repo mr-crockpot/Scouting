@@ -17,6 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+   
+    
+    
     _btnStart.enabled = NO;
     if ([self ReadyToGo]) {
         _btnStart.enabled = YES;

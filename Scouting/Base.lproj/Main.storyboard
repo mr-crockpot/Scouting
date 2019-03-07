@@ -44,17 +44,24 @@
                                     <action selector="btnStartPressed:" destination="rPa-mL-O7N" eventType="touchUpInside" id="ko9-3z-svX"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="IaS-VH-9bx">
+                                <rect key="frame" x="94" y="346" width="187.5" height="167"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Wju-i8-EP6" firstAttribute="centerX" secondItem="a8c-Ob-VW8" secondAttribute="centerX" id="6Mc-Me-Kzx"/>
+                            <constraint firstItem="IaS-VH-9bx" firstAttribute="centerX" secondItem="a8c-Ob-VW8" secondAttribute="centerX" id="DLA-Gu-ZQC"/>
+                            <constraint firstItem="IaS-VH-9bx" firstAttribute="centerY" secondItem="a8c-Ob-VW8" secondAttribute="centerY" multiplier="1.25" id="HFV-O1-DH7"/>
                             <constraint firstItem="Wju-i8-EP6" firstAttribute="height" secondItem="5Zr-2q-gkZ" secondAttribute="height" multiplier="0.1" id="KHu-BJ-jN5"/>
                             <constraint firstItem="Wju-i8-EP6" firstAttribute="width" secondItem="5Zr-2q-gkZ" secondAttribute="width" multiplier="0.4" id="Nqk-zy-ecW"/>
                             <constraint firstItem="7Nf-ZQ-v9l" firstAttribute="centerX" secondItem="a8c-Ob-VW8" secondAttribute="centerX" id="Rem-1t-Ll6"/>
                             <constraint firstItem="Wju-i8-EP6" firstAttribute="centerY" secondItem="a8c-Ob-VW8" secondAttribute="centerY" multiplier="0.35" id="SPH-Fj-cuj"/>
                             <constraint firstItem="7Nf-ZQ-v9l" firstAttribute="width" secondItem="5Zr-2q-gkZ" secondAttribute="width" multiplier="0.3" id="T6f-3w-gmj"/>
                             <constraint firstItem="Qs9-Mu-vbc" firstAttribute="height" secondItem="Wju-i8-EP6" secondAttribute="height" id="f4H-c3-Hst"/>
+                            <constraint firstItem="IaS-VH-9bx" firstAttribute="width" secondItem="5Zr-2q-gkZ" secondAttribute="width" multiplier="0.5" id="iiw-a7-gnm"/>
                             <constraint firstItem="7Nf-ZQ-v9l" firstAttribute="height" secondItem="5Zr-2q-gkZ" secondAttribute="height" multiplier="0.1" id="jM7-uz-t9t"/>
+                            <constraint firstItem="IaS-VH-9bx" firstAttribute="height" secondItem="5Zr-2q-gkZ" secondAttribute="height" multiplier="0.25" id="k9f-bJ-YTm"/>
                             <constraint firstItem="Qs9-Mu-vbc" firstAttribute="centerY" secondItem="a8c-Ob-VW8" secondAttribute="centerY" multiplier="0.8" id="kyQ-hy-TQw"/>
                             <constraint firstItem="7Nf-ZQ-v9l" firstAttribute="centerY" secondItem="a8c-Ob-VW8" secondAttribute="centerY" multiplier="1.5" id="pmS-od-88G"/>
                             <constraint firstItem="Qs9-Mu-vbc" firstAttribute="centerX" secondItem="a8c-Ob-VW8" secondAttribute="centerX" id="uHj-z0-I6E"/>
@@ -340,6 +347,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo.png" width="96" height="118"/>
         <image name="play2.png" width="96" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>

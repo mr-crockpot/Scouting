@@ -23,12 +23,7 @@
     self.navigationItem.leftItemsSupplementBackButton = YES;
     self.navigationItem.rightBarButtonItems= [NSArray arrayWithObjects:submit, nil];
     
-    
-/*   _segmentCargoHatch.selectedSegmentIndex = 0;
-    _type = @"C";
-    NSString *queryData = @"select * from times where times.type = 'C' and times.entered = 0" ;
-    [self loadData:queryData];
-  */
+
     [super viewDidLoad];
 }
 
@@ -62,7 +57,7 @@
     
     NSString *cellTeam;
     NSString *cellTime;
-    cellTeam = [NSString stringWithFormat:@"Team %@ in Match %@",_arrHatchData[indexPath.row][1],_arrHatchData[indexPath.row][2] ];
+    cellTeam = [NSString stringWithFormat:@"Team %@/Match %@/%@",_arrHatchData[indexPath.row][1],_arrHatchData[indexPath.row][2],_arrHatchData[indexPath.row][4]];
     
     
     cellTime = [NSString stringWithFormat:@"%0.2f",[_arrHatchData[indexPath.row][5] doubleValue]];
@@ -118,7 +113,7 @@
 }
 
 - (IBAction)btnShowAllPressed:(id)sender {
-    NSString *queryData = [NSString stringWithFormat: @"select * from times where times.type = '%@' AND  times.entered = 0",_type];
+    NSString *queryData = [NSString stringWithFormat: @"select * from times where times.type = '%@'",_type];
     [self loadData:queryData];
     
 }
