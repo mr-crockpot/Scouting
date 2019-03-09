@@ -19,10 +19,37 @@
     [super viewDidLoad];
     
    _arrScouts = [[NSMutableArray alloc] initWithObjects:
-                 @"Julia",
-                 @"Alex",
-                 @"Snicker",
-                 @"Coco",
+                 @"Aidan  Ruz",
+                 @"Alex Schor",
+                 @"Andrew  Pool",
+                 @"Bennett Grow",
+                 @"Brandon Coleman",
+                 @"Cameron Todd",
+                 @"Devon Rutledge",
+                 @"Elaina Weakliem",
+                 @"Emma Topping",
+                 @"Gabby Day",
+                 @"Gabe Weiner",
+                 @"Gavyn Stiles",
+                 @"Grady Eytcheson",
+                 @"Hagan Archer",
+                 @"Helen Laird",
+                 @"Isaac Stilwell",
+                 @"Jaymin Mazotti",
+                 @"Jonah  Lorenzo",
+                 @"Julia Dykstra",
+                 @"Julia Schor",
+                 @"Max Van Sickle",
+                 @"Nicholas  Kieft",
+                 @"Noah Maris",
+                 @"Owen Dominguez",
+                 @"Parker Secrest",
+                 @"Samuel Korman",
+                 @"Simon Thomas",
+                 @"Thomas Krumholz",
+                 @"Vanessa Kelly",
+                 @"Wes Naake",
+                 
                  nil];
     
     
@@ -109,5 +136,21 @@
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     
     _scoutNumber = row;
+}
+
+-(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
+    UILabel *label = (UILabel*) view;
+    if (label == nil)
+    {
+        label = [[UILabel alloc] init];
+    }
+    
+    label.text =_arrScouts[row];
+    label.textColor = [UIColor redColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont fontWithName:@"Helvetica" size:24];
+    
+    
+    return label;
 }
 @end

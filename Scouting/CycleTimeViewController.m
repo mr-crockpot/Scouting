@@ -135,10 +135,8 @@
    NSString *querySaveHatchData = [NSString stringWithFormat:@"INSERT INTO times VALUES (null,%li,%li,%li,'%@',%0.1f,'%@',TRUE,%li)",_teamNumber,_matchNumber,_observationHatch,_type,_timeElapsed,_stringTimeStamp,_scoutNumber];
     [_dbManager executeQuery:querySaveHatchData];
     
-    NSString *testSave =[NSString stringWithFormat:@"SELECT * FROM times"];
+   
     
-    NSMutableArray *testResult = [[NSMutableArray alloc] initWithArray:[_dbManager loadDataFromDB:testSave]];
-    NSLog(@"the data is %@",testResult);
 }
 
 -(void)storeCargoResults {
@@ -146,10 +144,8 @@
     NSString *querySaveCargoData = [NSString stringWithFormat:@"INSERT INTO times VALUES (null,%li,%li,%li,'%@',%0.1f,'%@',TRUE,%li)",_teamNumber,_matchNumber,_observationHatch,_type,_timeElapsed,_stringTimeStamp,_scoutNumber];
     [_dbManager executeQuery:querySaveCargoData];
     
-    NSString *testSave =[NSString stringWithFormat:@"SELECT * FROM times"];
-    
-    NSMutableArray *testResult = [[NSMutableArray alloc] initWithArray:[_dbManager loadDataFromDB:testSave]];
-    NSLog(@"the cargo data is %@",testResult);
+  
+     
 }
 
 
