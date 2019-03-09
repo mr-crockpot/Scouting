@@ -92,6 +92,7 @@
             queryData = @"select * from times where times.type = 'H'";
             break;
         case 2:
+            _type = @"B";
             queryData = @"select * from times";
             break;
         default:
@@ -107,13 +108,31 @@
     
 }
 - (IBAction)btnShowUnsubmittedPressed:(id)sender {
-    NSString *queryData = [NSString stringWithFormat: @"select * from times where times.type = '%@' AND  times.entered = 1",_type];
+    NSString *queryData;
+    
+    if ([_type  isEqualToString: @"H"] || [_type isEqualToString: @"C"]) {
+        queryData = [NSString stringWithFormat: @"select * from times where times.type = '%@' AND times.entered = 1",_type];
+        
+    }
+    else {
+        queryData = @"select * from times where times.entered = 1";
+    }
+    
     [self loadData:queryData];
     
 }
 
 - (IBAction)btnShowAllPressed:(id)sender {
-    NSString *queryData = [NSString stringWithFormat: @"select * from times where times.type = '%@'",_type];
+    NSString *queryData;
+    
+    if ([_type  isEqualToString: @"H"] || [_type isEqualToString: @"C"]) {
+        queryData = [NSString stringWithFormat: @"select * from times where times.type = '%@'",_type];
+
+    }
+    else {
+        queryData = @"select * from times";
+    }
+  
     [self loadData:queryData];
     
 }

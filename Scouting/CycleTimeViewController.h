@@ -49,6 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString *stringTimeStamp;
 
 @property NSInteger scoutNumber;
+@property (strong, nonatomic) IBOutlet UIProgressView *ProgressViewEntries;
 
 @property (strong, nonatomic) IBOutlet UIButton *btnCancel;
 - (IBAction)btnCancelPressed:(id)sender;

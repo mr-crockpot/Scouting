@@ -50,7 +50,7 @@
                                 <rect key="frame" x="94" y="346" width="187.5" height="167"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Loh-ed-wzp">
-                                <rect key="frame" x="0.0" y="19" width="430" height="134"/>
+                                <rect key="frame" x="0.0" y="19" width="375" height="133.5"/>
                                 <connections>
                                     <outlet property="dataSource" destination="rPa-mL-O7N" id="Qrs-VX-pqL"/>
                                     <outlet property="delegate" destination="rPa-mL-O7N" id="qUX-Kd-HML"/>
@@ -175,6 +175,13 @@
                                     <action selector="btnCancelPressed:" destination="rde-ag-i3I" eventType="touchUpInside" id="Xlu-yX-Wxn"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PTO-fq-xgN">
+                                <rect key="frame" x="94" y="622" width="187.5" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="QN8-Ty-dS6"/>
+                                </constraints>
+                                <color key="progressTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -200,13 +207,16 @@
                             <constraint firstItem="HIe-68-Sw2" firstAttribute="top" secondItem="VVo-pZ-yzU" secondAttribute="top" id="VxD-zs-ejc"/>
                             <constraint firstItem="fqB-Nl-Zrl" firstAttribute="centerX" secondItem="VVo-pZ-yzU" secondAttribute="centerX" id="WeI-fd-jFz"/>
                             <constraint firstItem="kCK-Vd-SAh" firstAttribute="centerX" secondItem="VVo-pZ-yzU" secondAttribute="centerX" id="Wp4-ag-67v"/>
+                            <constraint firstItem="PTO-fq-xgN" firstAttribute="centerX" secondItem="VVo-pZ-yzU" secondAttribute="centerX" id="aqo-aR-7ei"/>
                             <constraint firstItem="gXj-RM-lV7" firstAttribute="centerX" secondItem="jsd-Ff-usj" secondAttribute="centerX" id="cOj-u8-SFQ"/>
                             <constraint firstItem="kCK-Vd-SAh" firstAttribute="centerY" secondItem="VVo-pZ-yzU" secondAttribute="centerY" multiplier="1.6" id="cXM-sB-Wec"/>
                             <constraint firstItem="kCK-Vd-SAh" firstAttribute="height" secondItem="Gfo-ez-NPq" secondAttribute="height" multiplier="0.05" id="dMv-jp-cxj"/>
                             <constraint firstItem="jsd-Ff-usj" firstAttribute="centerX" secondItem="VVo-pZ-yzU" secondAttribute="centerX" multiplier="0.5" id="edZ-z9-A71"/>
                             <constraint firstItem="jsd-Ff-usj" firstAttribute="centerY" secondItem="VVo-pZ-yzU" secondAttribute="centerY" multiplier="0.22" id="f9E-la-yIL"/>
                             <constraint firstItem="4zu-V6-Y1H" firstAttribute="centerX" secondItem="VVo-pZ-yzU" secondAttribute="centerX" multiplier="0.5" id="gYQ-cN-tcT"/>
+                            <constraint firstItem="PTO-fq-xgN" firstAttribute="width" secondItem="Gfo-ez-NPq" secondAttribute="width" multiplier="0.5" id="hEj-XW-QPe"/>
                             <constraint firstItem="fGD-sL-Nk6" firstAttribute="height" secondItem="Gfo-ez-NPq" secondAttribute="height" multiplier="0.1" id="iM3-gw-YQx"/>
+                            <constraint firstItem="VVo-pZ-yzU" firstAttribute="bottom" secondItem="PTO-fq-xgN" secondAttribute="bottom" constant="40" id="kD3-XQ-L5f"/>
                             <constraint firstItem="HIe-68-Sw2" firstAttribute="width" secondItem="kCK-Vd-SAh" secondAttribute="width" id="kFG-Sh-lYs"/>
                             <constraint firstItem="PFo-Lf-bng" firstAttribute="height" secondItem="fGD-sL-Nk6" secondAttribute="height" id="kJc-HT-fLo"/>
                             <constraint firstItem="PFo-Lf-bng" firstAttribute="top" secondItem="obP-Q4-EES" secondAttribute="bottom" constant="8" id="ku7-sb-iHz"/>
@@ -219,6 +229,7 @@
                         <viewLayoutGuide key="safeArea" id="VVo-pZ-yzU"/>
                     </view>
                     <connections>
+                        <outlet property="ProgressViewEntries" destination="PTO-fq-xgN" id="MKu-JA-5LK"/>
                         <outlet property="btnCancel" destination="HIe-68-Sw2" id="zVQ-fn-xOS"/>
                         <outlet property="btnStartCargo" destination="obP-Q4-EES" id="z2q-CP-j0n"/>
                         <outlet property="btnStartHatch" destination="4zu-V6-Y1H" id="4Kr-MR-h46"/>

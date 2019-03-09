@@ -33,6 +33,7 @@
    
     self.view.backgroundColor = [UIColor lightGrayColor];
     [self formatLabels];
+    [self countEntries];
     
 }
 
@@ -135,7 +136,7 @@
    NSString *querySaveHatchData = [NSString stringWithFormat:@"INSERT INTO times VALUES (null,%li,%li,%li,'%@',%0.1f,'%@',TRUE,%li)",_teamNumber,_matchNumber,_observationHatch,_type,_timeElapsed,_stringTimeStamp,_scoutNumber];
     [_dbManager executeQuery:querySaveHatchData];
     
-   
+    [self countEntries];
     
 }
 
@@ -144,12 +145,14 @@
     NSString *querySaveCargoData = [NSString stringWithFormat:@"INSERT INTO times VALUES (null,%li,%li,%li,'%@',%0.1f,'%@',TRUE,%li)",_teamNumber,_matchNumber,_observationHatch,_type,_timeElapsed,_stringTimeStamp,_scoutNumber];
     [_dbManager executeQuery:querySaveCargoData];
     
-  
+    [self countEntries];
      
 }
 
 
 - (void)btnViewDataPressed {
+    [_timer invalidate];
+    _lblTimer.text =@"0.00";
     [self performSegueWithIdentifier:@"segueCycleTimeToTable"sender:self];
 }
 - (IBAction)btnStopMatchPressed:(id)sender {
@@ -183,5 +186,22 @@
     [_btnStartHatch setImage:[UIImage imageNamed:@"play2.png"] forState:UIControlStateNormal];
     _btnStartHatch.alpha = 1;
     _btnStartCargo.alpha = 1;
+}
+
+
+-(void)countEntries {
+   NSString *queryEntryCount = @"select count(*) from times where entered = 1";
+    NSMutableArray *entryCount;
+    entryCount = [[NSMutableArray alloc] initWithArray:[_dbManager loadDataFromDB:queryEntryCount]];
+                  
+    NSLog(@"The count is %@",entryCount);
+    float intEntryCount = [entryCount[0][0] floatValue];
+    NSLog(@"The int value is %f",intEntryCount);
+   // _ProgressViewEntries = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+    //[_ProgressViewEntries setprogress: intEntryCount/100.0f];
+    [_ProgressViewEntries setProgress:intEntryCount/100.0f];
+    
+  
+                  
 }
 @end
