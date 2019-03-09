@@ -47,17 +47,28 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="IaS-VH-9bx">
                                 <rect key="frame" x="94" y="346" width="187.5" height="167"/>
                             </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Loh-ed-wzp">
+                                <rect key="frame" x="0.0" y="156.5" width="375" height="82"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rPa-mL-O7N" id="Qrs-VX-pqL"/>
+                                    <outlet property="delegate" destination="rPa-mL-O7N" id="qUX-Kd-HML"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Loh-ed-wzp" firstAttribute="width" secondItem="5Zr-2q-gkZ" secondAttribute="width" id="583-VE-6rZ"/>
                             <constraint firstItem="Wju-i8-EP6" firstAttribute="centerX" secondItem="a8c-Ob-VW8" secondAttribute="centerX" id="6Mc-Me-Kzx"/>
                             <constraint firstItem="IaS-VH-9bx" firstAttribute="centerX" secondItem="a8c-Ob-VW8" secondAttribute="centerX" id="DLA-Gu-ZQC"/>
                             <constraint firstItem="IaS-VH-9bx" firstAttribute="centerY" secondItem="a8c-Ob-VW8" secondAttribute="centerY" multiplier="1.25" id="HFV-O1-DH7"/>
+                            <constraint firstItem="Qs9-Mu-vbc" firstAttribute="top" secondItem="Loh-ed-wzp" secondAttribute="bottom" constant="3" id="JaF-NP-Qa6"/>
                             <constraint firstItem="Wju-i8-EP6" firstAttribute="height" secondItem="5Zr-2q-gkZ" secondAttribute="height" multiplier="0.1" id="KHu-BJ-jN5"/>
                             <constraint firstItem="Wju-i8-EP6" firstAttribute="width" secondItem="5Zr-2q-gkZ" secondAttribute="width" multiplier="0.4" id="Nqk-zy-ecW"/>
                             <constraint firstItem="7Nf-ZQ-v9l" firstAttribute="centerX" secondItem="a8c-Ob-VW8" secondAttribute="centerX" id="Rem-1t-Ll6"/>
                             <constraint firstItem="Wju-i8-EP6" firstAttribute="centerY" secondItem="a8c-Ob-VW8" secondAttribute="centerY" multiplier="0.35" id="SPH-Fj-cuj"/>
                             <constraint firstItem="7Nf-ZQ-v9l" firstAttribute="width" secondItem="5Zr-2q-gkZ" secondAttribute="width" multiplier="0.3" id="T6f-3w-gmj"/>
+                            <constraint firstItem="Loh-ed-wzp" firstAttribute="centerX" secondItem="a8c-Ob-VW8" secondAttribute="centerX" id="dtB-yq-FKM"/>
+                            <constraint firstItem="Loh-ed-wzp" firstAttribute="top" secondItem="Wju-i8-EP6" secondAttribute="bottom" constant="3" id="eJ0-YZ-1cq"/>
                             <constraint firstItem="Qs9-Mu-vbc" firstAttribute="height" secondItem="Wju-i8-EP6" secondAttribute="height" id="f4H-c3-Hst"/>
                             <constraint firstItem="IaS-VH-9bx" firstAttribute="width" secondItem="5Zr-2q-gkZ" secondAttribute="width" multiplier="0.5" id="iiw-a7-gnm"/>
                             <constraint firstItem="7Nf-ZQ-v9l" firstAttribute="height" secondItem="5Zr-2q-gkZ" secondAttribute="height" multiplier="0.1" id="jM7-uz-t9t"/>
@@ -79,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tro-fC-fMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1522" y="31"/>
+            <point key="canvasLocation" x="1520.8" y="30.134932533733135"/>
         </scene>
         <!--Cycle Time View Controller-->
         <scene sceneID="lTh-xd-itf">
@@ -152,6 +163,16 @@
                                     <action selector="btnStopMatchPressed:" destination="rde-ag-i3I" eventType="touchDownRepeat" id="whn-0C-XxC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIe-68-Sw2">
+                                <rect key="frame" x="140.5" y="25" width="94" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="CANCEL">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCancelPressed:" destination="rde-ag-i3I" eventType="touchUpInside" id="Xlu-yX-Wxn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -174,6 +195,7 @@
                             <constraint firstItem="obP-Q4-EES" firstAttribute="centerX" secondItem="VVo-pZ-yzU" secondAttribute="centerX" multiplier="1.5" id="VaC-iJ-xGH"/>
                             <constraint firstItem="obP-Q4-EES" firstAttribute="width" secondItem="4zu-V6-Y1H" secondAttribute="width" id="VeW-Kg-vpU"/>
                             <constraint firstItem="fGD-sL-Nk6" firstAttribute="width" secondItem="4zu-V6-Y1H" secondAttribute="width" multiplier="0.5" id="VnH-wN-fEU"/>
+                            <constraint firstItem="HIe-68-Sw2" firstAttribute="top" secondItem="VVo-pZ-yzU" secondAttribute="top" constant="5" id="VxD-zs-ejc"/>
                             <constraint firstItem="fqB-Nl-Zrl" firstAttribute="centerX" secondItem="VVo-pZ-yzU" secondAttribute="centerX" id="WeI-fd-jFz"/>
                             <constraint firstItem="kCK-Vd-SAh" firstAttribute="centerX" secondItem="VVo-pZ-yzU" secondAttribute="centerX" id="Wp4-ag-67v"/>
                             <constraint firstItem="gXj-RM-lV7" firstAttribute="centerX" secondItem="jsd-Ff-usj" secondAttribute="centerX" id="cOj-u8-SFQ"/>
@@ -183,9 +205,11 @@
                             <constraint firstItem="jsd-Ff-usj" firstAttribute="centerY" secondItem="VVo-pZ-yzU" secondAttribute="centerY" multiplier="0.22" id="f9E-la-yIL"/>
                             <constraint firstItem="4zu-V6-Y1H" firstAttribute="centerX" secondItem="VVo-pZ-yzU" secondAttribute="centerX" multiplier="0.5" id="gYQ-cN-tcT"/>
                             <constraint firstItem="fGD-sL-Nk6" firstAttribute="height" secondItem="Gfo-ez-NPq" secondAttribute="height" multiplier="0.1" id="iM3-gw-YQx"/>
+                            <constraint firstItem="HIe-68-Sw2" firstAttribute="width" secondItem="kCK-Vd-SAh" secondAttribute="width" id="kFG-Sh-lYs"/>
                             <constraint firstItem="PFo-Lf-bng" firstAttribute="height" secondItem="fGD-sL-Nk6" secondAttribute="height" id="kJc-HT-fLo"/>
                             <constraint firstItem="PFo-Lf-bng" firstAttribute="top" secondItem="obP-Q4-EES" secondAttribute="bottom" constant="8" id="ku7-sb-iHz"/>
                             <constraint firstItem="gXj-RM-lV7" firstAttribute="width" secondItem="jsd-Ff-usj" secondAttribute="width" id="osp-DG-BZW"/>
+                            <constraint firstItem="HIe-68-Sw2" firstAttribute="centerX" secondItem="VVo-pZ-yzU" secondAttribute="centerX" id="xzw-jI-YCV"/>
                             <constraint firstItem="jsd-Ff-usj" firstAttribute="width" secondItem="Gfo-ez-NPq" secondAttribute="width" multiplier="0.5" id="ysL-8t-yAa"/>
                             <constraint firstItem="kCK-Vd-SAh" firstAttribute="width" secondItem="Gfo-ez-NPq" secondAttribute="width" multiplier="0.25" id="ytR-hy-ssr"/>
                             <constraint firstItem="m1I-dC-0H2" firstAttribute="centerY" secondItem="jsd-Ff-usj" secondAttribute="centerY" id="zZm-dV-SQq"/>
@@ -193,6 +217,7 @@
                         <viewLayoutGuide key="safeArea" id="VVo-pZ-yzU"/>
                     </view>
                     <connections>
+                        <outlet property="btnCancel" destination="HIe-68-Sw2" id="zVQ-fn-xOS"/>
                         <outlet property="btnStartCargo" destination="obP-Q4-EES" id="z2q-CP-j0n"/>
                         <outlet property="btnStartHatch" destination="4zu-V6-Y1H" id="4Kr-MR-h46"/>
                         <outlet property="btnStopMatch" destination="Gfo-ez-NPq" id="SZf-wF-osY"/>
@@ -351,6 +376,7 @@
         <image name="play2.png" width="96" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="XtU-bt-hrD"/>
         <segue reference="JQr-Rz-Zwp"/>
     </inferredMetricsTieBreakers>
 </document>

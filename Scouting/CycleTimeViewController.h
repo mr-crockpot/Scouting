@@ -47,10 +47,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property NSDate *timeStamp;
 @property NSString *stringTimeStamp;
-//@property (strong, nonatomic) IBOutlet UIButton *btnViewData;
-//- (IBAction)btnViewDataPressed:(id)sender;
 
- 
+@property NSInteger scoutNumber;
+
+@property (strong, nonatomic) IBOutlet UIButton *btnCancel;
+- (IBAction)btnCancelPressed:(id)sender;
+
 
 @end
 

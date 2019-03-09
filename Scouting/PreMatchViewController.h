@@ -10,12 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PreMatchViewController : UIViewController <UITextFieldDelegate>
+@interface PreMatchViewController : UIViewController <UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
+
 @property (strong, nonatomic) IBOutlet UITextField *textFieldTeamNumber;
 @property (strong, nonatomic) IBOutlet UIButton *btnStart;
 - (IBAction)btnStartPressed:(id)sender;
 @property (strong, nonatomic) IBOutlet UITextField *textFieldMatchNumber;
 
+@property (strong, nonatomic) NSMutableArray *arrScouts;
+@property NSInteger scoutNumber;
 @end
 
 NS_ASSUME_NONNULL_END

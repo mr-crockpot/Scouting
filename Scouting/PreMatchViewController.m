@@ -18,7 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-   
+   _arrScouts = [[NSMutableArray alloc] initWithObjects:
+                 @"Julia",
+                 @"Alex",
+                 @"Snicker",
+                 @"Coco",
+                 nil];
     
     
     _btnStart.enabled = NO;
@@ -33,7 +38,12 @@
     _textFieldMatchNumber.keyboardType = UIKeyboardTypeNumberPad;
     // Do any additional setup after loading the view.
 }
-
+-(void)viewDidAppear:(BOOL)animated {
+    _textFieldTeamNumber.text = nil;
+    _textFieldMatchNumber.text = nil;
+    _btnStart.enabled = NO;
+    
+}
 
 - (IBAction)btnStartPressed:(id)sender {
     [self performSegueWithIdentifier:@"seguePreMatchToCycleTime" sender:self];
@@ -44,7 +54,7 @@
     CycleTimeViewController *cycleTimeVC = [segue destinationViewController];
     cycleTimeVC.matchNumber = [_textFieldMatchNumber.text integerValue];
     cycleTimeVC.teamNumber = [_textFieldTeamNumber.text integerValue];
-    
+    cycleTimeVC.scoutNumber = _scoutNumber;
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -77,4 +87,27 @@
     return ready;
 }
 
+#pragma mark PICKER VIEW CODE
+
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    
+    return _arrScouts.count;
+}
+
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    
+    NSString *name;
+    name = _arrScouts[row];
+    return name;
+    
+}
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    
+    _scoutNumber = row;
+}
 @end

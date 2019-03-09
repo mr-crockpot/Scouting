@@ -132,7 +132,7 @@
 
 -(void)storeHatchResults {
     _type = @"H";
-   NSString *querySaveHatchData = [NSString stringWithFormat:@"INSERT INTO times VALUES (null,%li,%li,%li,'%@',%0.1f,'%@',TRUE)",_teamNumber,_matchNumber,_observationHatch,_type,_timeElapsed,_stringTimeStamp];
+   NSString *querySaveHatchData = [NSString stringWithFormat:@"INSERT INTO times VALUES (null,%li,%li,%li,'%@',%0.1f,'%@',TRUE,%li)",_teamNumber,_matchNumber,_observationHatch,_type,_timeElapsed,_stringTimeStamp,_scoutNumber];
     [_dbManager executeQuery:querySaveHatchData];
     
     NSString *testSave =[NSString stringWithFormat:@"SELECT * FROM times"];
@@ -143,7 +143,7 @@
 
 -(void)storeCargoResults {
     _type = @"C";
-    NSString *querySaveCargoData = [NSString stringWithFormat:@"INSERT INTO times VALUES (null,%li,%li,%li,'%@',%0.1f,'%@',TRUE)",_teamNumber,_matchNumber,_observationHatch,_type,_timeElapsed,_stringTimeStamp];
+    NSString *querySaveCargoData = [NSString stringWithFormat:@"INSERT INTO times VALUES (null,%li,%li,%li,'%@',%0.1f,'%@',TRUE,%li)",_teamNumber,_matchNumber,_observationHatch,_type,_timeElapsed,_stringTimeStamp,_scoutNumber];
     [_dbManager executeQuery:querySaveCargoData];
     
     NSString *testSave =[NSString stringWithFormat:@"SELECT * FROM times"];
@@ -160,7 +160,7 @@
     [_timer invalidate];
     _lblTeamNumber.text = nil;
     _lblMatchNumber.text = nil;
-  //  [self performSegueWithIdentifier:@"segueCycleTimeToPreMatch"sender:self];
+ 
     
 }
 
@@ -177,4 +177,15 @@
     return numbersThere;
 }
 
+- (IBAction)btnCancelPressed:(id)sender {
+    [_timer invalidate];
+    _lblTimer.text = @"0.00";
+    if(_timerOn){
+        _timerOn = NO;
+    }
+    [_btnStartCargo setImage:[UIImage imageNamed:@"play2.png"] forState:UIControlStateNormal];
+    [_btnStartHatch setImage:[UIImage imageNamed:@"play2.png"] forState:UIControlStateNormal];
+    _btnStartHatch.alpha = 1;
+    _btnStartCargo.alpha = 1;
+}
 @end

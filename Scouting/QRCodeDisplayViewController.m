@@ -25,14 +25,14 @@
 
 -(void)displayQRCode {
     
-    NSString *queryDataToSubmit = @"SELECT times.team, times.game,times.time, times.type FROM times WHERE times.entered = TRUE";
+    NSString *queryDataToSubmit = @"SELECT times.team, times.game,times.time, times.type,times.scout FROM times WHERE times.entered = TRUE";
     _arrSubmittedData = [[NSMutableArray alloc] initWithArray:[_dbManager loadDataFromDB:queryDataToSubmit]];
     
     
     NSString *submitPart;
     NSString *submitAll;
     for (int x=0; x<_arrSubmittedData.count;x++) {
-        submitPart = [NSString stringWithFormat:@"%@/%@/%@/%@",_arrSubmittedData[x][0],_arrSubmittedData[x][1],_arrSubmittedData[x][2],_arrSubmittedData[x][3]];
+        submitPart = [NSString stringWithFormat:@"%@/%@/%@/%@,%@",_arrSubmittedData[x][0],_arrSubmittedData[x][1],_arrSubmittedData[x][2],_arrSubmittedData[x][3],_arrSubmittedData[x][4]];
        
        if (submitAll.length == 0) {
            

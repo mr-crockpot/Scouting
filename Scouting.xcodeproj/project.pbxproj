@@ -25,12 +25,12 @@
 		E360B4A4222C4FE000F95E1F /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E360B4A3222C4FE000F95E1F /* DataViewController.m */; };
 		E360B4A5222C4FE000F95E1F /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E360B4A3222C4FE000F95E1F /* DataViewController.m */; };
 		E360B4A6222C4FE000F95E1F /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E360B4A3222C4FE000F95E1F /* DataViewController.m */; };
-		E360B4A8222E3FEB00F95E1F /* scoutingDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E360B4A7222E3FE900F95E1F /* scoutingDB.db */; };
-		E360B4A9222E3FEB00F95E1F /* scoutingDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E360B4A7222E3FE900F95E1F /* scoutingDB.db */; };
-		E360B4AA222E3FEB00F95E1F /* scoutingDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E360B4A7222E3FE900F95E1F /* scoutingDB.db */; };
 		E36CA11B2230792100701E02 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E36CA11A2230792000701E02 /* Logo.png */; };
 		E36CA11C2230792100701E02 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E36CA11A2230792000701E02 /* Logo.png */; };
 		E36CA11D2230792100701E02 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E36CA11A2230792000701E02 /* Logo.png */; };
+		E3E9CA5D223394FA0034250B /* scoutingDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E3E9CA5C223394F80034250B /* scoutingDB.db */; };
+		E3E9CA5E223394FA0034250B /* scoutingDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E3E9CA5C223394F80034250B /* scoutingDB.db */; };
+		E3E9CA5F223394FA0034250B /* scoutingDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E3E9CA5C223394F80034250B /* scoutingDB.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,8 +80,8 @@
 		E337EFDB222F63D00003D886 /* stop2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop2.png; sourceTree = "<group>"; };
 		E360B4A2222C4FE000F95E1F /* DataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
 		E360B4A3222C4FE000F95E1F /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
-		E360B4A7222E3FE900F95E1F /* scoutingDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = scoutingDB.db; sourceTree = "<group>"; };
 		E36CA11A2230792000701E02 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		E3E9CA5C223394F80034250B /* scoutingDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = scoutingDB.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,11 +116,11 @@
 				E309425A2220EB7F00F2F2D6 /* ScoutingTests */,
 				E30942652220EB7F00F2F2D6 /* ScoutingUITests */,
 				E30942402220EB7C00F2F2D6 /* Products */,
+				E3E9CA5C223394F80034250B /* scoutingDB.db */,
 				E36CA11A2230792000701E02 /* Logo.png */,
 				E337EFD9222F40530003D886 /* stop1.png */,
 				E337EFDB222F63D00003D886 /* stop2.png */,
 				E337EFD7222F3F6C0003D886 /* play2.png */,
-				E360B4A7222E3FE900F95E1F /* scoutingDB.db */,
 			);
 			sourceTree = "<group>";
 		};
@@ -284,9 +284,9 @@
 				E309424F2220EB7F00F2F2D6 /* LaunchScreen.storyboard in Resources */,
 				E337EFDA222F40540003D886 /* stop1.png in Resources */,
 				E309424C2220EB7F00F2F2D6 /* Assets.xcassets in Resources */,
+				E3E9CA5D223394FA0034250B /* scoutingDB.db in Resources */,
 				E309424A2220EB7D00F2F2D6 /* Main.storyboard in Resources */,
 				E36CA11B2230792100701E02 /* Logo.png in Resources */,
-				E360B4A8222E3FEB00F95E1F /* scoutingDB.db in Resources */,
 				E337EFD8222F3F6C0003D886 /* play2.png in Resources */,
 				E337EFDC222F63D00003D886 /* stop2.png in Resources */,
 			);
@@ -297,7 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E36CA11C2230792100701E02 /* Logo.png in Resources */,
-				E360B4A9222E3FEB00F95E1F /* scoutingDB.db in Resources */,
+				E3E9CA5E223394FA0034250B /* scoutingDB.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E36CA11D2230792100701E02 /* Logo.png in Resources */,
-				E360B4AA222E3FEB00F95E1F /* scoutingDB.db in Resources */,
+				E3E9CA5F223394FA0034250B /* scoutingDB.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
