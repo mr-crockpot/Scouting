@@ -194,11 +194,9 @@
     NSMutableArray *entryCount;
     entryCount = [[NSMutableArray alloc] initWithArray:[_dbManager loadDataFromDB:queryEntryCount]];
                   
-    NSLog(@"The count is %@",entryCount);
+ 
     float intEntryCount = [entryCount[0][0] floatValue];
-    NSLog(@"The int value is %f",intEntryCount);
-   // _ProgressViewEntries = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
-    //[_ProgressViewEntries setprogress: intEntryCount/100.0f];
+  
     [_ProgressViewEntries setProgress:intEntryCount/100.0f];
     
   

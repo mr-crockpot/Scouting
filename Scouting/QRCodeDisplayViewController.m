@@ -45,7 +45,8 @@
     
     _QRCodeUI = [[UIImage alloc] initWithCIImage:[QRCodeMaker createQRForString:[NSString stringWithFormat:@"%@",submitAll]]];
     
-   NSLog(@"The submitted data is %@",submitAll);
+ 
+    
     _imageViewQRCode.image = _QRCodeUI;
     
     NSString *queryAcceptData =@ "update times set entered = 0";
