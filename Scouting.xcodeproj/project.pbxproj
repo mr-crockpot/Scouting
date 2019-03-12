@@ -28,6 +28,7 @@
 		E36CA11B2230792100701E02 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E36CA11A2230792000701E02 /* Logo.png */; };
 		E36CA11C2230792100701E02 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E36CA11A2230792000701E02 /* Logo.png */; };
 		E36CA11D2230792100701E02 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E36CA11A2230792000701E02 /* Logo.png */; };
+		E38F054F22376F2F00936DC9 /* EmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E38F054E22376F2F00936DC9 /* EmailViewController.m */; };
 		E3E9CA5D223394FA0034250B /* scoutingDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E3E9CA5C223394F80034250B /* scoutingDB.db */; };
 		E3E9CA5E223394FA0034250B /* scoutingDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E3E9CA5C223394F80034250B /* scoutingDB.db */; };
 		E3E9CA5F223394FA0034250B /* scoutingDB.db in Resources */ = {isa = PBXBuildFile; fileRef = E3E9CA5C223394F80034250B /* scoutingDB.db */; };
@@ -81,6 +82,8 @@
 		E360B4A2222C4FE000F95E1F /* DataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
 		E360B4A3222C4FE000F95E1F /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		E36CA11A2230792000701E02 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		E38F054D22376F2F00936DC9 /* EmailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmailViewController.h; sourceTree = "<group>"; };
+		E38F054E22376F2F00936DC9 /* EmailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmailViewController.m; sourceTree = "<group>"; };
 		E3E9CA5C223394F80034250B /* scoutingDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = scoutingDB.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +149,8 @@
 				E30942782220EFF600F2F2D6 /* CycleTimeViewController.m */,
 				E360B4A2222C4FE000F95E1F /* DataViewController.h */,
 				E360B4A3222C4FE000F95E1F /* DataViewController.m */,
+				E38F054D22376F2F00936DC9 /* EmailViewController.h */,
+				E38F054E22376F2F00936DC9 /* EmailViewController.m */,
 				E3094280222113B700F2F2D6 /* QRCodeDisplayViewController.h */,
 				E3094281222113B700F2F2D6 /* QRCodeDisplayViewController.m */,
 				E309428322225EC700F2F2D6 /* DBManager.h */,
@@ -323,6 +328,7 @@
 				E360B4A4222C4FE000F95E1F /* DataViewController.m in Sources */,
 				E309427F22210EC900F2F2D6 /* QRCodeMaker.m in Sources */,
 				E30942792220EFF600F2F2D6 /* CycleTimeViewController.m in Sources */,
+				E38F054F22376F2F00936DC9 /* EmailViewController.m in Sources */,
 				E30942442220EB7C00F2F2D6 /* AppDelegate.m in Sources */,
 				E3094282222113B700F2F2D6 /* QRCodeDisplayViewController.m in Sources */,
 			);

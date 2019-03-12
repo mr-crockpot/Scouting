@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) NSMutableArray *arrScouts;
 @property NSInteger scoutNumber;
+
+@property NSMutableArray *arrLabels;
 @end
 
 NS_ASSUME_NONNULL_END

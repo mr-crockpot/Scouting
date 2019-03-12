@@ -352,23 +352,80 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nos-lZ-mfR">
                                 <rect key="frame" x="47" y="177" width="281" height="333.5"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Q5e-tw-fZ2">
+                                <rect key="frame" x="37.5" y="499.5" width="112.5" height="100"/>
+                                <state key="normal" title="Email Unsubmitted"/>
+                                <connections>
+                                    <action selector="btnSendEmailPressed:" destination="JX4-bK-uEM" eventType="touchUpInside" id="9PT-mv-dtd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="se8-BH-NRo">
+                                <rect key="frame" x="225" y="499.5" width="112.5" height="100"/>
+                                <state key="normal" title="Email All Data"/>
+                                <connections>
+                                    <action selector="btnSendEmailPressed:" destination="JX4-bK-uEM" eventType="touchUpInside" id="ESz-C4-F8M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="se8-BH-NRo" firstAttribute="centerX" secondItem="sPE-Wq-fhh" secondAttribute="centerX" multiplier="1.5" id="0Om-Mi-yVx"/>
                             <constraint firstItem="Nos-lZ-mfR" firstAttribute="width" secondItem="FS8-UA-imC" secondAttribute="width" multiplier="0.75" id="7gg-jO-hgw"/>
+                            <constraint firstItem="se8-BH-NRo" firstAttribute="height" secondItem="Q5e-tw-fZ2" secondAttribute="height" id="AmN-Hx-cZi"/>
                             <constraint firstItem="Nos-lZ-mfR" firstAttribute="centerY" secondItem="sPE-Wq-fhh" secondAttribute="centerY" id="EuW-F4-GuI"/>
                             <constraint firstItem="Nos-lZ-mfR" firstAttribute="centerX" secondItem="sPE-Wq-fhh" secondAttribute="centerX" id="FPj-xK-u3R"/>
+                            <constraint firstItem="Q5e-tw-fZ2" firstAttribute="centerX" secondItem="sPE-Wq-fhh" secondAttribute="centerX" multiplier="0.5" id="L8o-XB-WMC"/>
+                            <constraint firstItem="Q5e-tw-fZ2" firstAttribute="height" secondItem="FS8-UA-imC" secondAttribute="height" multiplier="0.15" id="NgK-rc-abW"/>
+                            <constraint firstItem="Q5e-tw-fZ2" firstAttribute="width" secondItem="FS8-UA-imC" secondAttribute="width" multiplier="0.3" id="WIG-dn-xYr"/>
+                            <constraint firstItem="Q5e-tw-fZ2" firstAttribute="centerY" secondItem="sPE-Wq-fhh" secondAttribute="centerY" multiplier="1.6" id="fJS-k4-zme"/>
                             <constraint firstItem="Nos-lZ-mfR" firstAttribute="height" secondItem="FS8-UA-imC" secondAttribute="height" multiplier="0.5" id="kq2-Gd-enX"/>
+                            <constraint firstItem="se8-BH-NRo" firstAttribute="width" secondItem="Q5e-tw-fZ2" secondAttribute="width" id="nmy-hn-7wi"/>
+                            <constraint firstItem="se8-BH-NRo" firstAttribute="top" secondItem="Q5e-tw-fZ2" secondAttribute="top" id="rfm-3N-l0B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sPE-Wq-fhh"/>
                     </view>
                     <connections>
+                        <outlet property="btnEmailAll" destination="se8-BH-NRo" id="IgU-cH-NXp"/>
+                        <outlet property="btnEmailUnsubmitted" destination="Q5e-tw-fZ2" id="HbV-Jm-qPK"/>
                         <outlet property="imageViewQRCode" destination="Nos-lZ-mfR" id="Ysf-vF-dRD"/>
+                        <segue destination="wZZ-L7-HMn" kind="show" identifier="segueQRCodeDisplayToEmail" id="mmm-Hz-8qy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQU-IB-MPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3934" y="30"/>
+        </scene>
+        <!--Email View Controller-->
+        <scene sceneID="Dqq-aH-pjk">
+            <objects>
+                <viewController id="wZZ-L7-HMn" customClass="EmailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g9f-iX-xKm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAIL CANCELLED" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LO1-nE-aKX">
+                                <rect key="frame" x="0.0" y="277" width="375" height="133"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LO1-nE-aKX" firstAttribute="width" secondItem="g9f-iX-xKm" secondAttribute="width" id="IZc-HU-j0p"/>
+                            <constraint firstItem="LO1-nE-aKX" firstAttribute="centerY" secondItem="TCr-F6-9H7" secondAttribute="centerY" id="ih6-t8-f3w"/>
+                            <constraint firstItem="LO1-nE-aKX" firstAttribute="height" secondItem="g9f-iX-xKm" secondAttribute="height" multiplier="0.2" id="kD7-Yh-1U5"/>
+                            <constraint firstItem="LO1-nE-aKX" firstAttribute="centerX" secondItem="TCr-F6-9H7" secondAttribute="centerX" id="tWg-q6-0k8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TCr-F6-9H7"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblMailSent" destination="LO1-nE-aKX" id="ZB2-Yq-EuJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bEY-dI-jwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4796" y="29.23538230884558"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="efk-og-pKF">
